@@ -7,9 +7,6 @@
   justify-content: center;
   column-gap: 8px;
 }
-.menu .item {
-  display: flex;
-}
 .menu .button {
   min-width: 73px;
   border: 0;
@@ -87,9 +84,8 @@
 }
 @media screen and (max-width: 767px) {
   .portfolio-box {
-    display: inline-block;
-    width: 326px;
-    height: 91px;
+    max-width: 326px;
+    height: 100%;
     margin-bottom: 40px;
   }
   .menu {
@@ -100,16 +96,16 @@
   .work {
     flex-direction: column;
   }
-  .work .item {
-    width: 450px;
-    height: 404px;
+  .work-link {
+    max-width: 450px;
+    max-height: 404px;
   }
 }
 @media screen and (min-width: 768px) {
   .menu {
     margin-bottom: 14px;
   }
-  .work .item {
+  .work-link {
     width: 354px;
     height: 440px;
   }
@@ -128,7 +124,7 @@
   .menu {
     margin-bottom: 32px;
   }
-  .work .item {
+  .work-link {
     width: 370px;
     height: 404px;
   }

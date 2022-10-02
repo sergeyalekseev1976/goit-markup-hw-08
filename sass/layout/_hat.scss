@@ -1,4 +1,5 @@
 .hat-site {
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding: 118px 0;
@@ -9,7 +10,6 @@
   align-content: center;
 }
 .hat-site__title {
-  width: 360px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
@@ -46,6 +46,9 @@
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/site_mobile/img.jpg);
     background-color: var(--header-footer-bg-color);
   }
+  .hat-site__title {
+    max-width: 360px;
+  }
 }
 @media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
   screen and (min-resolution: 192dpi) and (max-width: 767px),
@@ -59,6 +62,9 @@
   .hat-site {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/site_tablet/img.jpg);
   }
+  .hat-site__title {
+    width: 360px;
+  }
 }
 
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
@@ -70,6 +76,7 @@
 }
 @media screen and (min-width: 1200px) {
   .hat-site {
+    max-width: 1600px;
     padding: 200px 0;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/site_desktop/img.jpg);
   }

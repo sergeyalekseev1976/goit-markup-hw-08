@@ -1,7 +1,7 @@
+.page-header {
+  border-bottom: 1px solid var(--border-line-color);
+}
 @media screen and (max-width: 767px) {
-  .page-header {
-    border-bottom: 1px solid var(--border-line-color);
-  }
   .nav-site__list {
     display: none;
   }

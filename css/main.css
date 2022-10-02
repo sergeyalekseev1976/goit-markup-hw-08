@@ -83,6 +83,8 @@ ul {
 
 .container {
   width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -90,8 +92,6 @@ ul {
 @media screen and (min-width: 480px) {
   .container {
     width: 480px;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 @media screen and (min-width: 768px) {
@@ -146,8 +146,8 @@ ul {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 450px;
-  height: 609px;
+  width: 100%;
+  height: 100%;
   padding: 40px;
   background-color: var(--basic-bg-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -169,6 +169,18 @@ ul {
   fill: var(--accent-color);
 }
 
+@media screen and (max-width: 767px) {
+  .modal {
+    max-width: 450px;
+    max-height: 609px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 450px;
+    height: 609px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .modal {
     width: 528px;
@@ -328,10 +340,11 @@ ul {
     line-height: 1.71;
   }
 }
+.page-header {
+  border-bottom: 1px solid var(--border-line-color);
+}
+
 @media screen and (max-width: 767px) {
-  .page-header {
-    border-bottom: 1px solid var(--border-line-color);
-  }
   .nav-site__list {
     display: none;
   }
@@ -558,7 +571,7 @@ ul {
 }
 
 .form-email-footer {
-  width: 450px;
+  width: 100%;
   height: 50px;
   padding: 15px;
   background-color: var(--header-footer-bg-color);
@@ -610,6 +623,9 @@ ul {
   .social-footer {
     margin-bottom: 60px;
   }
+  .form-email-footer {
+    max-width: 450px;
+  }
 }
 @media screen and (min-width: 768px) {
   .footer-tablet-box {
@@ -618,6 +634,9 @@ ul {
     gap: 165px;
     align-items: baseline;
     margin-bottom: 60px;
+  }
+  .form-email-footer {
+    width: 450px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -755,6 +774,7 @@ ul {
   }
   .mobile-social__list {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
   }
   .mobile-social__item:not(:last-child) {
@@ -775,6 +795,7 @@ ul {
   }
 }
 .hat-site {
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding: 118px 0;
@@ -785,7 +806,6 @@ ul {
 }
 
 .hat-site__title {
-  width: 360px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
@@ -821,6 +841,9 @@ ul {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/site_mobile/img.jpg);
     background-color: var(--header-footer-bg-color);
   }
+  .hat-site__title {
+    max-width: 360px;
+  }
 }
 @media screen and (min-device-pixel-ratio: 2) and (max-width: 767px), screen and (min-resolution: 192dpi) and (max-width: 767px), screen and (min-resolution: 2dppx) and (max-width: 767px) {
   .hat-site {
@@ -831,6 +854,9 @@ ul {
   .hat-site {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/site_tablet/img.jpg);
   }
+  .hat-site__title {
+    width: 360px;
+  }
 }
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-resolution: 2dppx) and (min-width: 768px) {
   .hat-site {
@@ -839,6 +865,7 @@ ul {
 }
 @media screen and (min-width: 1200px) {
   .hat-site {
+    max-width: 1600px;
     padding: 200px 0;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/site_desktop/img.jpg);
   }
@@ -993,6 +1020,7 @@ ul {
 
 .social-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   column-gap: 10px;
 }
@@ -1074,6 +1102,7 @@ ul {
 .customers-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
 }
 
@@ -1126,10 +1155,6 @@ ul {
   display: flex;
   justify-content: center;
   column-gap: 8px;
-}
-
-.menu .item {
-  display: flex;
 }
 
 .menu .button {
@@ -1214,9 +1239,8 @@ ul {
 
 @media screen and (max-width: 767px) {
   .portfolio-box {
-    display: inline-block;
-    width: 326px;
-    height: 91px;
+    max-width: 326px;
+    height: 100%;
     margin-bottom: 40px;
   }
   .menu {
@@ -1227,16 +1251,16 @@ ul {
   .work {
     flex-direction: column;
   }
-  .work .item {
-    width: 450px;
-    height: 404px;
+  .work-link {
+    max-width: 450px;
+    max-height: 404px;
   }
 }
 @media screen and (min-width: 768px) {
   .menu {
     margin-bottom: 14px;
   }
-  .work .item {
+  .work-link {
     width: 354px;
     height: 440px;
   }
@@ -1255,7 +1279,7 @@ ul {
   .menu {
     margin-bottom: 32px;
   }
-  .work .item {
+  .work-link {
     width: 370px;
     height: 404px;
   }
