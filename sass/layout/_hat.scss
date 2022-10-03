@@ -43,6 +43,7 @@
 
 @media screen and (max-width: 767px) {
   .hat-site {
+    max-width: 480px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/site_mobile/img.jpg);
     background-color: var(--header-footer-bg-color);
   }
@@ -60,7 +61,9 @@
 
 @media screen and (min-width: 768px) {
   .hat-site {
+    max-width: 768px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/site_tablet/img.jpg);
+    background-color: var(--header-footer-bg-color);
   }
   .hat-site__title {
     width: 360px;
@@ -79,6 +82,7 @@
     max-width: 1600px;
     padding: 200px 0;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/site_desktop/img.jpg);
+    background-color: var(--header-footer-bg-color);
   }
   .hat-site__title {
     width: 696px;
