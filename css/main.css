@@ -1206,6 +1206,7 @@ ul {
 }
 
 .work-link {
+  height: 100%;
   transition: box-shadow var(--transition-dur-fun);
 }
 .work-link:hover, .work-link:focus {
@@ -1273,20 +1274,20 @@ ul {
   .work {
     flex-direction: column;
   }
-  .work-link {
+  .work .item {
     max-width: 450px;
-    max-height: 404px;
   }
 }
 @media screen and (min-width: 768px) {
   .menu {
     margin-bottom: 14px;
   }
+  .work .item {
+    width: 354px;
+  }
   .work-link {
     display: flex;
     flex-direction: column;
-    width: 354px;
-    height: 100%;
   }
   .overlay {
     padding: 49px 24px 77px 24px;
@@ -1304,9 +1305,8 @@ ul {
   .menu {
     margin-bottom: 32px;
   }
-  .work-link {
+  .work .item {
     width: 370px;
-    height: 404px;
   }
   .overlay {
     padding: 63px 24px;
