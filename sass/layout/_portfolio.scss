@@ -106,14 +106,17 @@
     margin-bottom: 14px;
   }
   .work-link {
+    display: flex;
+    flex-direction: column;
     width: 354px;
-    height: 440px;
+    height: 100%;
   }
   .overlay {
     padding: 49px 24px 77px 24px;
   }
   .description {
-    padding: 20px 24px 56px 24px;
+    flex-grow: 1;
+    padding: 20px 24px;
   }
 }
 @media screen and (min-width: 1200px) {
